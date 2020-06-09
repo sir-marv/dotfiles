@@ -91,4 +91,5 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
+autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
 autocmd BufWritePre * :call TrimWhitespace()

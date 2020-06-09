@@ -17,7 +17,7 @@ static const char normbordercolor[]       = "#928374";
 static const char normfgcolor[]           = "#d5c4a1";
 static const char selfgcolor[]            = "#fbf1c7";
 static const char selbordercolor[]        = "#b16286";
-static const char selbgcolor[]            = "#458588";
+static const char selbgcolor[]            = "#8ec07c";
 static const char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -80,10 +80,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY,			            XK_minus,  spawn,		   SHCMD("pamixer --allow-boost -d 5") },
-	{ MODKEY|ShiftMask,	           	XK_minus,  spawn,		   SHCMD("pamixer --allow-boost -d 15") },
-	{ MODKEY,						XK_equal,  spawn,		   SHCMD("pamixer --allow-boost -i 5") },
-	{ MODKEY|ShiftMask,				XK_equal,  spawn,	       SHCMD("pamixer --allow-boost -i 15") },
+	{ MODKEY,			            XK_minus,  spawn,		   SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,	           	XK_minus,  spawn,		   SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,						XK_equal,  spawn,		   SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,				XK_equal,  spawn,	       SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,		        XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_w,      spawn,		   SHCMD("$BROWSER") },
