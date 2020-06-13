@@ -16,7 +16,7 @@ static const char normbgcolor[]           = "#282828";
 static const char normbordercolor[]       = "#928374";
 static const char normfgcolor[]           = "#d5c4a1";
 static const char selfgcolor[]            = "#fbf1c7";
-static const char selbordercolor[]        = "#b16286";
+static const char selbordercolor[]        = "#fe8019";
 static const char selbgcolor[]            = "#8ec07c";
 static const char *colors[][3] = {
        /*               fg           bg           border   */
@@ -111,8 +111,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      spawn,		   SHCMD("st -e ncmpcpp") },
 	{ MODKEY,                       XK_space,  zoom,		   {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+	{ MODKEY,                       XK_comma,  spawn,          SHCMD("mpc prev")},
+	{ MODKEY,                       XK_period, spawn,          SHCMD("mpc next")},
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,						XK_F3,     spawn,          SHCMD("displayselect")},

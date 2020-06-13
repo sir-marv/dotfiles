@@ -1,0 +1,19 @@
+# abook addressbook file
+
+[format]
+program=abook
+version=0.6.1
+
+
+[0]
+name=Martin Zirkle
+email=martinzirkle@gmail.com
+
+[1]
+name=Martin Zirkle
+email=martin@martinzirkle.com
+
+[2]
+name=Martin Zirkle
+email=martin@martinzirkle.com
+
