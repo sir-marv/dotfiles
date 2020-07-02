@@ -108,14 +108,20 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
+	{ MODKEY,                       XK_n,      spawn,		   SHCMD("st -e newsboat") },
 	{ MODKEY,                       XK_m,      spawn,		   SHCMD("st -e ncmpcpp") },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,		   SHCMD("st -e pulsemixer") },
 	{ MODKEY,                       XK_space,  zoom,		   {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_comma,  spawn,          SHCMD("mpc prev")},
 	{ MODKEY,                       XK_period, spawn,          SHCMD("mpc next")},
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_Print, spawn,           SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png")},
 	{ MODKEY,						XK_F3,     spawn,          SHCMD("displayselect")},
+	{ MODKEY,						XK_F11,     spawn,          SHCMD("sudo systemctl restart openvpn-client@client; kill -39 $(pidof dwmblocks)")},
+	{ MODKEY|ShiftMask,				XK_F11,     spawn,          SHCMD("sudo systemctl stop openvpn-client@client; kill -39 $(pidof dwmblocks)")},
+	{ MODKEY,						XK_F12,     spawn,          SHCMD("st -e sudo nmtui")},
 };
 
 /* button definitions */
