@@ -12,6 +12,7 @@ set nobackup
 set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
+set clipboard+=unnamedplus
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -27,6 +28,7 @@ Plug 'tweekmonster/gofmt.vim'
 Plug 'vim-utils/vim-man'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 set cmdheight=2
@@ -93,3 +95,8 @@ endfun
 
 autocmd BufWritePost ~/.config/dwmblocks/config.h !cd ~/.config/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
 autocmd BufWritePre * :call TrimWhitespace()
+
+" LaTeX
+autocmd BufRead,BufNewFile *.tex set filetype=tex
+map <leader>c :w! \| !compiler <c-r>%<CR>
+autocmd VimLeave *.tex !texclear %
