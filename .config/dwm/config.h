@@ -5,12 +5,12 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 2;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 2;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 2;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 2;       /* vert outer gap between windows and screen edge */
 static const int smartgaps			= 0;
-static const char *fonts[]          = { "monospace:size=10" };
+static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char normbgcolor[]           = "#282828";
 static const char normbordercolor[]       = "#928374";
@@ -108,7 +108,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
-	{ MODKEY,                       XK_n,      spawn,		   SHCMD("st -e newsboat") },
+	{ MODKEY,                       XK_n,      spawn,		   SHCMD("st -e newsboat; kill -40 $(pidof dwmblocks)") },
 	{ MODKEY,                       XK_m,      spawn,		   SHCMD("st -e ncmpcpp") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,		   SHCMD("st -e pulsemixer") },
 	{ MODKEY,                       XK_space,  zoom,		   {0} },
@@ -119,8 +119,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_Print, spawn,           SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png")},
 	{ MODKEY,						XK_F3,     spawn,          SHCMD("displayselect")},
-	{ MODKEY,						XK_F11,     spawn,          SHCMD("sudo systemctl restart openvpn-client@client; kill -39 $(pidof dwmblocks)")},
-	{ MODKEY|ShiftMask,				XK_F11,     spawn,          SHCMD("sudo systemctl stop openvpn-client@client; kill -39 $(pidof dwmblocks)")},
+	{ MODKEY,						XK_F11,     spawn,          SHCMD("sudo -A systemctl restart openvpn-client@client; kill -39 $(pidof dwmblocks)")},
+	{ MODKEY|ShiftMask,				XK_F11,     spawn,          SHCMD("sudo -A systemctl stop openvpn-client@client; kill -39 $(pidof dwmblocks)")},
 	{ MODKEY,						XK_F12,     spawn,          SHCMD("st -e sudo nmtui")},
 };
 

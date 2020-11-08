@@ -8,12 +8,9 @@ static const Block blocks[] = {
 	{"",	"iplocate",	0, 5},
 	{"",	"mailbox",	180, 12},
 	{"",	"volume",	0,	10},
-	/*{"",	"battery",	5,	3},*/
+	{"",	"battery",	5,	3},
 	{"",	"clock",	60,	1},
 	{"",	"internet",	0,	4},
 };
-
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
 static char *delim = " ";
-
-// autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }

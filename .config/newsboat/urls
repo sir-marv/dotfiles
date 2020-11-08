@@ -1,14 +1,25 @@
+"---Blogs---"
 http://lukesmith.xyz/rss.xml
-https://notrelated.libsyn.com/rss
 https://www.archlinux.org/feeds/news/ "tech"
-
+https://ryf.fsf.org/news/rss.xml
+https://www.pine64.org/feed/
+https://n-o-d-e.net/rss/rss.xml
+https://solokeys.com/blogs/news.atom
 " "
 "---Cooking:---"
 https://gourmetvegetariankitchen.com/feed/
-
+https://zerowastechef.com/feed
 " "
 "---YouTube:---"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCznk4o83WjKFCwEZ8th8wHQ "~Edible Acres (YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCCFc8IHynJ_scgk9izHpawg "~John Zahorian (YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCZAENaOaceQUMd84GDc26EA
+https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2
+https://www.youtube.com/feeds/videos.xml?channel_id=UCznk4o83WjKFCwEZ8th8wHQ "~Edible Acres"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCCFc8IHynJ_scgk9izHpawg "~John Zahorian"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCZAENaOaceQUMd84GDc26EA ""
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~ThePrimeagen"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCiB2VwnJoPDDq26pB7y4H8g "~Herbal Jedi"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCcbf8wnyVJl631LAmAbo7nw "Learn Your Land"
+" "
+"---Podcasts---"
+https://notrelated.libsyn.com/rss
+http://www.brainwashed.com/podcast/podcast_rss.xml
+https://www.freedomdecrypted.com/public_html/feed/
